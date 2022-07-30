@@ -13,7 +13,8 @@
     "typescript": "^4.6.2"
   },
   "scripts": {
-    "native": "cd apps/expo && expo start",
-    "web": "cd apps/next && yarn next"
+    "mobile": "cd apps/mobile && expo start",
+    "web": "cd apps/web && yarn next",
+    "api:dev": "cd apps/api && yarn start:dev"
   }
 }

@@ -1,7 +1,7 @@
 import { Text, useSx, View, H1, P, Row, A } from 'dripsy'
 import { TextLink } from 'solito/link'
 import { MotiLink } from 'solito/moti'
-import Ionicons from '@expo/vector-icons/Ionicons';
+import Ionicons from '@expo/vector-icons/Ionicons'
 
 export function HomeScreen() {
   const sx = useSx()
@@ -10,7 +10,7 @@ export function HomeScreen() {
     <View
       sx={{ flex: 1, justifyContent: 'center', alignItems: 'center', p: 16 }}
     >
-      <H1 sx={{ fontWeight: '800' }}>Welcome to Solito.</H1>
+      <H1 sx={{ fontWeight: '800' }}>Bienvenido a Cantera IT Latam</H1>
       <View sx={{ maxWidth: 600 }}>
         <P sx={{ textAlign: 'center' }}>
           Here is a basic starter to show you how you can navigate from one
@@ -33,7 +33,8 @@ export function HomeScreen() {
           .
         </P>
         <P sx={{ textAlign: 'center' }}>
-          Cross Platform Expo Vector Icon <Ionicons name="md-checkmark-circle" size={32} color="green" />
+          Cross Platform Expo Vector Icon{' '}
+          <Ionicons name="md-checkmark-circle" size={32} color="green" />
         </P>
       </View>
       <View sx={{ height: 32 }} />
