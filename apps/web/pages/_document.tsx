@@ -1,1 +1,1 @@
-export { default } from "@expo/next-adapter/document"
+export { default } from '@native-base/next-adapter/document'

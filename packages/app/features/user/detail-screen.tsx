@@ -1,19 +1,33 @@
-import { View, Text } from 'dripsy'
 import { createParam } from 'solito'
-import { TextLink } from 'solito/link'
+import { Link as SolitoLink } from 'solito/link'
+import React from 'react'
+import { Center, Heading, Button, Box, ChevronLeftIcon } from 'native-base'
+import { ColorModeSwitch } from '../../components'
 
 const { useParam } = createParam<{ id: string }>()
 
 export function UserDetailScreen() {
   const [id] = useParam('id')
-
   return (
-    <View sx={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text
-        sx={{ textAlign: 'center', mb: 16, fontWeight: 'bold' }}
-      >{`User ID: ${id}`}</Text>
-
-      <TextLink href="/">👈 Go Home</TextLink>
-    </View>
+    <Center
+      flex="1"
+      _dark={{ bg: 'blueGray.900' }}
+      _light={{ bg: 'blueGray.50' }}
+    >
+      <Heading>{`Hey there, ${id}! 👋`}</Heading>
+      <Box mt="6">
+        <SolitoLink href="/">
+          <Button
+            pointerEvents="none"
+            leftIcon={<ChevronLeftIcon size="xs" />}
+            variant="outline"
+            colorScheme="coolGray"
+          >
+            Go Back
+          </Button>
+        </SolitoLink>
+      </Box>
+      <ColorModeSwitch />
+    </Center>
   )
 }

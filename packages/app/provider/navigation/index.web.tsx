@@ -2,6 +2,7 @@
 // instead, we just have a no-op here
 // for more, see: https://solito.dev/recipes/tree-shaking
 
+import React from 'react'
 export const NavigationProvider = ({
   children,
 }: {
